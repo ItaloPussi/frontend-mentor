@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: hsl(204, 43%, 93%);
+    font-family: "Karla", "Arial", sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "info info" "price why";
+    background: #fff;
+    margin: 4rem auto 0 auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.2);
+}
+
+p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    padding:.5rem 0;
+    max-width: 90%;
+    color:  hsl(218, 22%, 67%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.info {
+    grid-area: info;
+    padding: 40px;
+}
+
+.info .join {
+    color: hsl(179, 62%, 43%);
+    padding-bottom: 1.5rem;
+}
+
+.info .guarantee{
+    color: hsl(71, 73%, 54%);
+    font-weight: bold;;
+}
+
+.why {
+    grid-area: why;
+    padding: 40px;
+    background: hsl(179, 62%, 43%);
+    opacity: 0.8;
+    color: white;
+}
+
+.why li{
+    opacity: 0.7;
+    padding: .2rem 0;
+}
+
+.price {
+    grid-area: price;
+    background: hsl(179, 62%, 43%);
+    color: white;
+    padding: 40px;
+}
+
+.price .price-big {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+.price span:not(.price-big){
+    margin-left: 1rem;
+    opacity: 0.7;
+}
+
+.price button {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    background: hsl(71, 73%, 54%);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.why h3,
+.price h3{
+    color: white;
+    font-size: 1.3rem;
+    padding-bottom: 1.5rem;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 720px){
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'info' 'price' 'why';
+    }
+}
+
+/* Attibution */
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-size: 1rem;
+    color: #1d1d1d;
+    text-align: right;
+}
+
+footer .attribution {
+    margin: 0;
+    padding: 0;
+    color: #1d1d1d;
+    text-decoration: none;
+    max-width: 100%;
+}
