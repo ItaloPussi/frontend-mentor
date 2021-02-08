@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./images/bg-pattern-desktop.svg") no-repeat center center/cover;
+    display: flex;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: "Josefin Sans", Arial, sans-serif;
+}
+
+p {
+    color: hsl(0, 36%, 70%);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-top: 1rem;
+    max-width: 450px;
+}
+
+body .base {
+    flex: 1;
+    padding: 0 10rem;
+}
+
+body .base .logo {
+    padding: 2rem 0;
+    display: block;
+}
+
+body .base .woman-mobile {
+    display: none;
+}
+
+.base h1 {
+    margin-top: 4rem;
+    color: hsl(0, 6%, 24%);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 4.5rem;
+    font-weight: 400;
+    max-width: 400px;
+}
+
+.base h1 span{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+
+}
+
+body .image img{
+    height: 100vh;
+}
+
+.form-control-out {
+    max-width: 450px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.form-control-out h5{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: hsl(0, 93%, 68%);
+    visibility: hidden;
+}
+.form-control {
+    width: 100%;
+    display: inline-block;
+    border-radius: 20px;
+    height: 3rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control input {
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  color: hsl(0, 36%, 70%);
+}
+
+.form-control button {
+    height: 100%;
+    width: 25%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    cursor: pointer;
+}
+
+.form-control button:hover {
+    transform: scale(1.1);
+}
+
+.danger h5 {
+    visibility: visible;
+}
+
+.danger .form-control{
+    border: 1px solid red
+}
+
+@media (max-width:1186px){
+    body .base {
+        padding: 1.5rem 5rem;
+    }
+}
+
+@media (max-width:1020px){
+    body .base{
+        padding: 1.5rem 3rem;
+    }
+}
+
+@media (max-width:960px){
+    body{
+        display: block;
+    }
+
+    body .base {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    body .image {
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+
+    body .base {
+        padding: 0;
+        width: 100%;
+    }
+
+    body .base > *:not(.woman-mobile){
+        margin: 2rem;
+    }
+
+    body .base .woman-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    p {
+        padding: 0;
+    }
+
+    body .base h1 {
+        font-size: 4rem;
+    }
+
+}
